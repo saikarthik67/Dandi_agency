@@ -65,7 +65,7 @@ export default function About() {
         {/* Team */}
         <section className="py-24">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-16 text-center">The Troublemakers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:flex md:justify-center">
             {team.map((t, i) => (
               <motion.div 
                 key={i}
