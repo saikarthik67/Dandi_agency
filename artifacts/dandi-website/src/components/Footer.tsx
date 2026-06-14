@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
-            <img src={dandiLogoPath} alt="Dandi" className="h-24 w-auto mb-8" />
+            <img src={dandiLogoPath} alt="Dandi" className="h-40 w-auto mb-8" />
             <p className="text-xl text-gray-400 font-sans max-w-md mb-8">
               A bold, scrappy, color-obsessed studio making startups look like big brands.
             </p>
