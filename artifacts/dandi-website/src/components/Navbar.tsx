@@ -2,8 +2,8 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import dandiLogoPath from "@assets/Dandi.co.in_(1)_1781466128581.png";
-import dandiLogoWhitePath from "@assets/Dandi.co.in-white_1781466168709.png";
+import dandiLogoPath from "@assets/Dandi.co.in-logo2_1781467814543.png";
+import dandiLogoWhitePath from "@assets/Dandi.co.in-logo2-w_1781467814543.png";
 import { cn } from "@/lib/utils";
 
 export function Navbar({ isDark = false }: { isDark?: boolean }) {
