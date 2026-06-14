@@ -58,7 +58,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Marquee */}
       <div className="bg-primary py-4 overflow-hidden border-y-4 border-foreground rotate-[-1deg] scale-105 my-12 shadow-[0_8px_0_0_rgba(20,15,12,1)]">
         <motion.div 
@@ -73,7 +72,6 @@ export default function Home() {
           ))}
         </motion.div>
       </div>
-
       {/* Services Mini */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
@@ -97,7 +95,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Selected Work */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-6">
@@ -131,7 +128,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Stats/Why Us */}
       <section className="py-32 bg-dandi-blue text-white overflow-hidden relative">
         <div className="container mx-auto px-6 relative z-10">
@@ -141,7 +137,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 border-4 border-white/20 rounded-3xl backdrop-blur-sm bg-white/5">
-                <div className="text-6xl font-display font-bold text-dandi-yellow mb-2">50+</div>
+                <div className="text-6xl font-display font-bold text-dandi-yellow mb-2">10+</div>
                 <div className="font-sans text-xl uppercase tracking-wider">Brands Built</div>
               </div>
               <div className="p-6 border-4 border-white/20 rounded-3xl backdrop-blur-sm bg-white/5">
@@ -156,7 +152,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Big CTA */}
       <section className="py-32 bg-dandi-yellow text-foreground text-center border-t-8 border-foreground">
         <div className="container mx-auto px-6">
