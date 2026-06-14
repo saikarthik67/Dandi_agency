@@ -34,7 +34,7 @@ export function Navbar({ isDark = false }: { isDark?: boolean }) {
           <img 
             src={useWhiteLogo ? dandiLogoWhitePath : dandiLogoPath} 
             alt="Dandi" 
-            className="h-20 w-auto transition-all duration-300" 
+            className="h-28 w-auto transition-all duration-300" 
           />
         </Link>
 
