@@ -29,28 +29,17 @@ export function Navbar({ isDark = false }: { isDark?: boolean }) {
 
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", bgClass)}>
-      <div className="container mx-auto px-6 pt-3 pb-2 flex flex-col gap-1">
-        {/* Row 1: Logo + mobile toggle */}
-        <div className="flex items-center justify-between">
-          <Link href="/" className="relative z-50">
-            <img 
-              src={useWhiteLogo ? dandiLogoWhitePath : dandiLogoPath} 
-              alt="Dandi" 
-              className="h-40 w-auto transition-all duration-300" 
-            />
-          </Link>
-          {/* Mobile Toggle */}
-          <button 
-            className={cn("md:hidden relative z-50 p-2", isOpen ? "text-foreground" : textColor)}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-          </button>
-        </div>
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="relative z-50">
+          <img 
+            src={useWhiteLogo ? dandiLogoWhitePath : dandiLogoPath} 
+            alt="Dandi" 
+            className="h-14 w-auto transition-all duration-300" 
+          />
+        </Link>
 
-        {/* Row 2: Desktop Nav */}
-        <nav className="hidden md:flex items-center justify-end gap-3">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-3">
           {[
             { href: "/", label: "Home", num: "01", color: "#F5C518", textColor: "#140F0C" },
             { href: "/about", label: "About", num: "02", color: "#3B82F6", textColor: "#fff" },
@@ -98,6 +87,14 @@ export function Navbar({ isDark = false }: { isDark?: boolean }) {
           </Link>
         </nav>
 
+        {/* Mobile Toggle */}
+        <button 
+          className={cn("md:hidden relative z-50 p-2", isOpen ? "text-foreground" : textColor)}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+        </button>
       </div>
 
       {/* Mobile Menu */}
