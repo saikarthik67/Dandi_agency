@@ -33,18 +33,18 @@ export default function Home() {
             We Make Brands <br/>
             <span className="text-primary italic px-4">Unforgettable</span>
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-[0.25em] text-sm md:text-base mb-5 px-5 py-2 rounded-full border-2 border-primary text-primary bg-primary/10"
+            className="flex items-center justify-center gap-6 mb-6"
           >
-            <span>Discover</span>
-            <span className="text-white/40">·</span>
-            <span>Approach</span>
-            <span className="text-white/40">·</span>
-            <span>Launch</span>
-          </motion.p>
+            <span className="font-display font-black uppercase tracking-widest text-lg md:text-2xl border-b-4 border-dandi-yellow text-white pb-1">Discover</span>
+            <span className="w-8 h-[3px] bg-white/20 rounded-full" />
+            <span className="font-display font-black uppercase tracking-widest text-lg md:text-2xl border-b-4 border-primary text-white pb-1">Approach</span>
+            <span className="w-8 h-[3px] bg-white/20 rounded-full" />
+            <span className="font-display font-black uppercase tracking-widest text-lg md:text-2xl border-b-4 border-dandi-green text-white pb-1">Launch</span>
+          </motion.div>
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
