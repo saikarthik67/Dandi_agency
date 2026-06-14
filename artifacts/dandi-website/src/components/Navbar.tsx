@@ -39,26 +39,48 @@ export function Navbar({ isDark = false }: { isDark?: boolean }) {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-3">
           {[
-            { href: "/", label: "Home" },
-            { href: "/about", label: "About" },
-            { href: "/services", label: "Services" },
-            { href: "/contact", label: "Contact" },
-          ].map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href}
-              className={cn(
-                "font-sans font-medium text-sm uppercase tracking-wider hover:text-primary transition-colors",
-                textColor,
-                location === link.href && "text-primary font-bold"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link href="/contact" className="ml-4">
+            { href: "/", label: "Home", num: "01", color: "#F5C518", textColor: "#140F0C" },
+            { href: "/about", label: "About", num: "02", color: "#3B82F6", textColor: "#fff" },
+            { href: "/services", label: "Services", num: "03", color: "#34D399", textColor: "#140F0C" },
+            { href: "/contact", label: "Contact", num: "04", color: "#F97316", textColor: "#fff" },
+          ].map((link) => {
+            const isActive = location === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                data-testid={`nav-link-${link.label.toLowerCase()}`}
+                className="group relative"
+              >
+                <span
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-full border-2 font-bold uppercase tracking-wider text-sm transition-all duration-200"
+                  style={{
+                    borderColor: link.color,
+                    backgroundColor: isActive ? link.color : "transparent",
+                    color: isActive ? link.textColor : (isDark && !scrolled ? "#fff" : "#140F0C"),
+                  }}
+                  onMouseEnter={e => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.backgroundColor = link.color;
+                      (e.currentTarget as HTMLElement).style.color = link.textColor;
+                    }
+                  }}
+                  onMouseLeave={e => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                      (e.currentTarget as HTMLElement).style.color = isDark && !scrolled ? "#fff" : "#140F0C";
+                    }
+                  }}
+                >
+                  <span className="text-[10px] font-mono opacity-60">{link.num}</span>
+                  {link.label}
+                </span>
+              </Link>
+            );
+          })}
+          <Link href="/contact" className="ml-2">
             <Button size="lg" className="rounded-full font-bold uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-[4px_4px_0px_0px_rgba(20,15,12,1)] hover:shadow-none hover:translate-y-1 hover:translate-x-1 border-2 border-foreground">
               Let's Talk
             </Button>
