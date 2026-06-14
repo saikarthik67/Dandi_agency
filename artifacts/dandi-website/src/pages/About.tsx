@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function About() {
   const team = [
-    { name: "Rahul S.", title: "Chief Color Theorist", color: "bg-dandi-blue" },
-    { name: "Priya M.", title: "Typography Terrorist", color: "bg-primary" },
-    { name: "Amit K.", title: "Chaos Coordinator", color: "bg-dandi-green" },
+    { name: "Saikarthik.D", title: "Designer · Developer · Founder", color: "bg-primary" },
   ];
 
   const values = [
