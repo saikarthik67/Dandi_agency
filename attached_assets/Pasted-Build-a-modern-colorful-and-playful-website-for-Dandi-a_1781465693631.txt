@@ -1,0 +1,51 @@
+Build a modern, colorful, and playful website for Dandi, an Indian graphic design and branding agency. The website should feel creative, energetic, and fun — reflecting the personality of a bold design studio. The brand name "Dandi" should feel confident and artistic.
+
+Design Style
+
+Mood: Colorful, playful, creative, youthful, bold
+Color Palette: Vibrant primaries + neons mixed with clean white space — think electric yellow, coral red, cobalt blue, mint green as accent colors with off-white or cream backgrounds
+Typography: Mix of a chunky bold display font (e.g. Syne, Clash Display, or Space Grotesk) for headings + clean sans-serif (e.g. DM Sans or Inter) for body text
+Layout: Asymmetric, dynamic layouts with overlapping elements, large section headings, generous whitespace
+Micro-interactions: Hover effects on buttons, cursor effects, smooth scroll animations (GSAP or Framer Motion style)
+Imagery: Showcase colorful design mockups, brand identities, logo work, typography samples
+
+
+Pages & Content
+1. 🏠 Home Page
+
+Hero Section: Big animated headline like "We Make Brands Unforgettable" + a colorful abstract graphic or looping animation. CTA button: "See Our Work" and "Let's Talk"
+Marquee/Ticker Strip: Scrolling text strip with words like — Branding · Logos · Packaging · Identity · Typography · Illustration ·
+What We Do (mini teaser): 3–4 icon cards showing core services with short punchy descriptions
+Featured Work: 3–4 portfolio cards with project name, category tag, and hover overlay effect
+Why Dandi: 2–3 fun stats or values (e.g. 50+ Brands Built · 100% Passion Driven · Based in India, Made for the World)
+CTA Section: Bold full-width banner — "Ready to stand out?" with a button to Contact
+
+2. 👋 About Page
+
+Studio Intro: Who is Dandi? A short brand story — origin, mission, what makes you different
+Team Section: Photo cards with name + fun title (e.g. "Chief Color Theorist")
+Values/Philosophy: 3 pillars like Creativity, Clarity, Character with short descriptions
+Fun Visual Element: Illustrated or hand-drawn style decoration, doodles, or sticker-like badges
+
+3. 🛠 Services Page
+
+Service Cards (detailed):
+
+Logo & Brand Identity
+Brand Strategy & Naming
+Packaging Design
+Social Media Design
+Typography & Print
+Pitch Decks & Presentations
+
+
+Each card: icon, title, 2-line description, optional "Learn More" toggle
+Process Section: Step-by-step — Discover → Design → Deliver with icons
+CTA: "Not sure what you need? Let's figure it out together" → Contact button
+
+4. 📬 Contact Page
+
+Headline: "Let's Build Something Beautiful"
+Contact Form Fields: Name, Email, Company/Brand Name, Type of Project (dropdown), Message, Budget Range (optional)
+Direct Info: Email address, Instagram handle (@dandi.co.in), WhatsApp button (important for Indian clients)
+Fun Element: A small illustrated character or doodle near the form
