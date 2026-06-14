@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import dandiLogoPath from "@assets/Dandi.co.in_(1)_1781466128581.png";
+import dandiLogoPath from "@assets/Dandi.co.in-white_1781466734364.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
-            <img src={dandiLogoPath} alt="Dandi" className="h-20 w-auto mb-8 bg-background p-2 rounded-xl rotate-[-2deg]" />
+            <img src={dandiLogoPath} alt="Dandi" className="h-24 w-auto mb-8" />
             <p className="text-xl text-gray-400 font-sans max-w-md mb-8">
               A bold, scrappy, color-obsessed studio making startups look like big brands.
             </p>
