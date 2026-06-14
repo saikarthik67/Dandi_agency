@@ -33,13 +33,25 @@ export default function Home() {
             We Make Brands <br/>
             <span className="text-primary italic px-4">Unforgettable</span>
           </motion.h1>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-[0.25em] text-sm md:text-base mb-5 px-5 py-2 rounded-full border-2 border-primary text-primary bg-primary/10"
+          >
+            <span>Discover</span>
+            <span className="text-white/40">·</span>
+            <span>Approach</span>
+            <span className="text-white/40">·</span>
+            <span>Launch</span>
+          </motion.p>
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
             className="text-xl md:text-2xl font-sans max-w-2xl mx-auto mb-12 text-gray-300"
           >
-            Discover. Approach. Launch. The design studio that makes startups look like industry giants.
+            The design studio that makes startups look like industry giants.
           </motion.p>
           <motion.div 
             initial={{ scale: 0.9, opacity: 0 }}
