@@ -41,6 +41,17 @@ export default function Contact() {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
+
+    if (!supabase) {
+      setIsSubmitting(false);
+      toast({
+        title: "Something went wrong",
+        description: "Please reach us on WhatsApp or email instead.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     const { error } = await supabase.from("contact_submissions").insert([{
       name: data.name,
       email: data.email,
