@@ -91,11 +91,11 @@ export default function Contact() {
               <h2 className="text-4xl font-display font-bold mb-10">Don't like forms?</h2>
               
               <div className="flex flex-col gap-8 font-sans text-xl font-bold">
-                <a href="mailto:hello.dandi.branding@gmail.com" className="flex items-center gap-4 hover:underline">
+                <a href="mailto:dandi@dandiagency.com" className="flex items-center gap-4 hover:underline">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-foreground">
                     <Mail className="w-6 h-6" />
                   </div>
-                  hello.dandi.branding@gmail.com
+                  dandi@dandiagency.com
                 </a>
                 
                 <a href="https://wa.me/919553466446" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:underline text-dandi-green">
@@ -132,7 +132,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-lg font-bold">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" className="h-14 text-lg border-2 border-border focus-visible:ring-primary rounded-xl bg-background" {...field} />
+                          <Input placeholder="dandi" className="h-14 text-lg border-2 border-border focus-visible:ring-primary rounded-xl bg-background" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -145,7 +145,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-lg font-bold">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@startup.com" type="email" className="h-14 text-lg border-2 border-border focus-visible:ring-primary rounded-xl bg-background" {...field} />
+                          <Input placeholder="dandi@dandiagency.com" type="email" className="h-14 text-lg border-2 border-border focus-visible:ring-primary rounded-xl bg-background" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

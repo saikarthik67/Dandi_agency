@@ -32,7 +32,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <h3 className="font-display text-2xl font-bold mb-6 text-dandi-green">Say Hello</h3>
             <div className="flex flex-col gap-4 font-sans text-lg text-gray-300">
-              <a href="mailto:hello.dandi.branding@gmail.com" className="hover:text-primary transition-colors">hello.dandi.branding@gmail.com</a>
+              <a href="mailto:dandi@dandiagency.com" className="hover:text-primary transition-colors">dandi@dandiagency.com</a>
               <p>Based in India.<br/>Made for the World.</p>
               <Link href="/contact" className="mt-4 inline-block">
                 <Button variant="outline" className="rounded-full border-2 border-dandi-yellow text-dandi-yellow hover:bg-dandi-yellow hover:text-black font-bold uppercase tracking-wider transition-all">
