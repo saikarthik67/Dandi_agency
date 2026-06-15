@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        var search = location.search;
+        if (search.slice(1, 3) === "p=") {
+          var decoded = search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/^p=/, "/").replace(/~and~/g, "&");
+            });
+          var path = decoded[0];
+          var query = decoded
+            .slice(1)
+            .join("&")
+            .replace(/^q=/, "?");
+          history.replaceState(
+            null,
+            null,
+            path + query + location.hash
+          );
+        }
+      })();
+    </script>
+    <title>Dandi — Indian Design & Branding Agency</title>
+    <meta name="description" content="Dandi is a bold Indian graphic design and branding agency. We help brands discover their identity, build their presence, and launch with impact." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Dandi — Indian Design & Branding Agency" />
+    <meta property="og:description" content="Dandi is a bold Indian graphic design and branding agency. We help brands discover their identity, build their presence, and launch with impact." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dandi — Indian Design & Branding Agency" />
+    <meta name="twitter:description" content="Dandi is a bold Indian graphic design and branding agency. We help brands discover their identity, build their presence, and launch with impact." />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-Bbq282-_.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DOn7Jbg4.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

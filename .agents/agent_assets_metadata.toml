@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Pa7EWH_uN-DboWpoclc_F"
+uri = "file://artifacts/dandi-website/public/images/brew-wave.png"
+type = "image"
+title = "Brew Wave coffee brand"
+
+[[generated]]
+id = "d4_z7nYWMI_K2Wd-zr3oL"
+uri = "file://artifacts/dandi-website/public/images/rangnikaa.png"
+type = "image"
+title = "Rangnikaa bold orange logo"
+
+[[generated]]
+id = "hRTUVnPZX5GoIKOCyz1TD"
+uri = "file://artifacts/dandi-website/public/images/sk-samosa.png"
+type = "image"
+title = "SK Samosa food packaging"
+
+[[generated]]
+id = "BZA2-lUPtWNkoyUvJGqjW"
+uri = "file://artifacts/dandi-website/public/images/roastara.png"
+type = "image"
+title = "Roastara coffee brand"
+
+[[generated]]
+id = "SXGg7PS-ZsQ1fG9Ofb1QN"
+uri = "file://artifacts/dandi-website/public/images/hero-abstract.png"
+type = "image"
+title = "Abstract colorful design graphic"
