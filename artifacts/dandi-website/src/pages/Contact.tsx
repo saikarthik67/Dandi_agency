@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -9,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MessageCircle, Instagram } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -23,7 +25,8 @@ type FormValues = z.infer<typeof formSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
-  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,8 +39,27 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Form submitted", data);
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    const { error } = await supabase.from("contact_submissions").insert([{
+      name: data.name,
+      email: data.email,
+      company: data.company || null,
+      project_type: data.type,
+      budget: data.budget || null,
+      message: data.message,
+    }]);
+    setIsSubmitting(false);
+
+    if (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or reach us on WhatsApp.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     toast({
       title: "Message sent!",
       description: "We'll get back to you within 24 hours.",
@@ -189,8 +211,8 @@ export default function Contact() {
                   )}
                 />
 
-                <Button type="submit" size="xl" className="w-full h-20 text-2xl rounded-2xl font-bold uppercase tracking-wider bg-foreground text-white hover:bg-primary transition-all shadow-[8px_8px_0px_0px_rgba(20,15,12,0.2)] hover:shadow-none hover:translate-y-2 hover:translate-x-2">
-                  Send it
+                <Button type="submit" disabled={isSubmitting} size="xl" className="w-full h-20 text-2xl rounded-2xl font-bold uppercase tracking-wider bg-foreground text-white hover:bg-primary transition-all shadow-[8px_8px_0px_0px_rgba(20,15,12,0.2)] hover:shadow-none hover:translate-y-2 hover:translate-x-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                  {isSubmitting ? "Sending..." : "Send it"}
                 </Button>
               </form>
             </Form>
